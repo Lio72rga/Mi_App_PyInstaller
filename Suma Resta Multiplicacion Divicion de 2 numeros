@@ -1,0 +1,14 @@
+#Solicitar que ingrese dos numeros y calcular la suma,resta, multipicacion y division
+
+print("Ingrese el primer numero: ")
+num1 = float(input())
+print("Ingrese el segundo numero: ")
+num2 = float(input())
+suma = num1 + num2
+resta = num1 - num2
+mult = num1 * num2
+div = num1 / num2
+print("El resultado de la suma es: ",suma)
+print("El resultado de la resta es: ",resta)
+print("El resultado de la multiplicacion es: ", mult)
+print("El resultado de la division es: ", div)

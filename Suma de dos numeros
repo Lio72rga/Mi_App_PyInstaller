@@ -1,0 +1,15 @@
+##archivo: sumar 2 numeros.py
+##autor Lionel Martinez
+##Este programa suma dos numeros ingresados por el usuario
+
+num1 = 0
+num2 = 0
+suma = 0
+
+print("Bienvenido!!!")
+print("Ingrese un numero entero: ")
+num1 = int(input())
+print("Ingrese el otro numero: ")
+num2 = int(input())
+suma=num1+num2
+print("El resultado de la suma es: ",suma)

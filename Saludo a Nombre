@@ -1,0 +1,5 @@
+#Solicitar al usuario que ingrese su nombre, apellido y saludar
+nombre = input ("introdice tu nombre: ")
+apellido=input("Ingrese su apellido: ")
+print("¡Hola,", nombre+"", apellido+" !BIENVENIDO!")
+
