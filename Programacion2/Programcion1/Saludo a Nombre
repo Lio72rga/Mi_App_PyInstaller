@@ -2,4 +2,3 @@
 nombre = input ("introdice tu nombre: ")
 apellido=input("Ingrese su apellido: ")
 print("¡Hola,", nombre+"", apellido+" !BIENVENIDO!")
-

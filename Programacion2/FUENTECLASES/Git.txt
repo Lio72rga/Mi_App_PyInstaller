@@ -1,0 +1,4 @@
+git init
+git add . text
+PS C:\Users\amartinez\Lionel_Politecnico> git commit -m "agregar archivos 
+txt
