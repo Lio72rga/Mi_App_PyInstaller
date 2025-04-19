@@ -1,4 +1,6 @@
 git init
-git add . text
-PS C:\Users\amartinez\Lionel_Politecnico> git commit -m "agregar archivos 
-txt
+git add . 
+git commit -m "Agregar archivos txt"
+git branch -M main (agregamos la rama)
+git remote add origin https://github.com/Lio72rga/Lio72rga.git (repositorio remoto en Githab)
+git push origin main
