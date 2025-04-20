@@ -1,7 +1,19 @@
-#Contador regresivo
-#Solicitar al usuario un numero inicial
-numero_inicial = int(input("Ingrese un numero inicial "))
+import time
+from playsound import playsound
 
-for i in range(numero_inicial, -1, -1):
-    print({i})
+def contador_regresivo(segundos):
+    while segundos > 0:
+        minutos, segundos_restantes = divmod(segundos, 60)
+        print(f"{minutos:02d}:{segundos_restantes:02d}", end="\r")
+        time.sleep(1)
+        segundos -= 1
+    print("¡Tiempo terminado!")
+    playsound('alarma.mp3')
+
+try:
+    tiempo_inicial = int(input("Introduce el tiempo en segundos: "))
+    contador_regresivo(tiempo_inicial)
+except ValueError:
+    print("Por favor, introduce un número válido.")
+
 
