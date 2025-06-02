@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Mini Currículum</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <h1>¡Hola! Soy Lionel Martinez</h1>
+
+    <img src="mi_foto.gpj.web" alt="Foto de Lionel" width="200">
+
+
+    <h2>Habilidades:</h2>
+    <ul>
+        <li>Programación en Python</li>
+        <li>Diseño Web</li>
+        <li>Análisis de Datos</li>
+    </ul>
+
+    <h2>Contacto:</h2>
+    <p>Podés visitar mi perfil en <a href="https://www.linkedin.com/in/lionel-matinez-4aa45830a/" target="_blank">LinkedIn</a>.</p>
+</body>
+</html>

@@ -1,0 +1,150 @@
+# Función para guardar los datos en un archivo de texto
+def guardar_en_archivo(diccionario, nombre_archivo):
+    with open(nombre_archivo, "w", encoding="utf-8") as archivo:
+        for nombre, datos in diccionario.items():
+            archivo.write(f"Nombre: {nombre}\n")
+            archivo.write(f"Edad: {datos['edad']}\n")
+            archivo.write("Materias:\n")
+            for materia in datos["materias"]:
+                archivo.write(f" - {materia}\n")
+            archivo.write("\n")  # línea en blanco entre estudiantes
+    print(f"Datos guardados en '{nombre_archivo}'")
+
+    guardar_en_archivo(diccionario_estudiantes, "estudiantes.txt")
+
+    # Tupla inicial
+tupla_estudiantes = (
+    ("Ana", 20, ["Matemática", "Programación", "Inglés"]),
+    ("Luis", 22, ["Estadística", "Bases de Datos", "Inglés Técnico"]),
+    ("María", 19, ["Lógica", "Probabilidad", "Programación"])
+)
+
+# Convertir la tupla en lista
+lista_estudiantes = list(tupla_estudiantes)
+
+# Agregar nuevo estudiante
+nuevo_estudiante = ("Carlos", 21, ["Álgebra", "Física", "Inglés"])
+lista_estudiantes.append(nuevo_estudiante)
+
+# Transformar en diccionario
+diccionario_estudiantes = {}
+for nombre, edad, materias in lista_estudiantes:
+    diccionario_estudiantes[nombre] = {
+        "edad": edad,
+        "materias": materias
+    }
+
+# Mostrar los datos
+print("=== DATOS DE LOS ESTUDIANTES ===")
+for nombre, datos in diccionario_estudiantes.items():
+    print(f"\nNombre: {nombre}")
+    print(f"Edad: {datos['edad']}")
+    print("Materias:")
+    for materia in datos["materias"]:
+        print(f" - {materia}")
+
+# Función para guardar los datos en un archivo de texto
+def guardar_en_archivo(diccionario, nombre_archivo):
+    with open(nombre_archivo, "w", encoding="utf-8") as archivo:
+        for nombre, datos in diccionario.items():
+            archivo.write(f"Nombre: {nombre}\n")
+            archivo.write(f"Edad: {datos['edad']}\n")
+            archivo.write("Materias:\n")
+            for materia in datos["materias"]:
+                archivo.write(f" - {materia}\n")
+            archivo.write("\n")
+    print(f"\nDatos guardados en '{nombre_archivo}'")
+
+# Guardar en archivo
+guardar_en_archivo(diccionario_estudiantes, "estudiantes.txt")
+
+# Tupla inicial
+tupla_estudiantes = (
+    ("Ana", 20, ["Matemática", "Programación", "Inglés"]),
+    ("Luis", 22, ["Estadística", "Bases de Datos", "Inglés Técnico"]),
+    ("María", 19, ["Lógica", "Probabilidad", "Programación"])
+)
+
+# Convertir la tupla en lista
+lista_estudiantes = list(tupla_estudiantes)
+
+# Agregar nuevo estudiante
+nuevo_estudiante = ("Carlos", 21, ["Álgebra", "Física", "Inglés"])
+lista_estudiantes.append(nuevo_estudiante)
+
+# Transformar en diccionario
+diccionario_estudiantes = {}
+for nombre, edad, materias in lista_estudiantes:
+    diccionario_estudiantes[nombre] = {
+        "edad": edad,
+        "materias": materias
+    }
+
+# Mostrar los datos
+print("=== DATOS DE LOS ESTUDIANTES ===")
+for nombre, datos in diccionario_estudiantes.items():
+    print(f"\nNombre: {nombre}")
+    print(f"Edad: {datos['edad']}")
+    print("Materias:")
+    for materia in datos["materias"]:
+        print(f" - {materia}")
+
+# Función para guardar los datos en un archivo de texto
+def guardar_en_archivo(diccionario, nombre_archivo):
+    with open(nombre_archivo, "w", encoding="utf-8") as archivo:
+        for nombre, datos in diccionario.items():
+            archivo.write(f"Nombre: {nombre}\n")
+            archivo.write(f"Edad: {datos['edad']}\n")
+            archivo.write("Materias:\n")
+            for materia in datos["materias"]:
+                archivo.write(f" - {materia}\n")
+            archivo.write("\n")
+    print(f"\nDatos guardados en '{nombre_archivo}'")
+
+# Guardar en archivo
+guardar_en_archivo(diccionario_estudiantes, "estudiantes.txt")
+
+def leer_archivo(nombre_archivo):
+    diccionario = {}
+    try:
+        with open(nombre_archivo, "r", encoding="utf-8") as archivo:
+            nombre = ""
+            edad = 0
+            materias = []
+            for linea in archivo:
+                linea = linea.strip()
+                if linea.startswith("Nombre:"):
+                    if nombre:  # guardar estudiante anterior antes de empezar uno nuevo
+                        diccionario[nombre] = {
+                            "edad": edad,
+                            "materias": materias
+                        }
+                        materias = []
+                    nombre = linea.replace("Nombre:", "").strip()
+                elif linea.startswith("Edad:"):
+                    edad = int(linea.replace("Edad:", "").strip())
+                elif linea.startswith("-"):
+                    materia = linea.replace("-", "").strip()
+                    materias.append(materia)
+            # Guardar el último estudiante
+            if nombre:
+                diccionario[nombre] = {
+                    "edad": edad,
+                    "materias": materias
+                }
+    except FileNotFoundError:
+        print(f"No se encontró el archivo '{nombre_archivo}'.")
+    return diccionario
+
+    # Leer archivo y cargar los datos
+archivo = "estudiantes.txt"
+datos_cargados = leer_archivo(archivo)
+
+# Mostrar los datos cargados
+print("\n=== ESTUDIANTES CARGADOS DESDE ARCHIVO ===")
+for nombre, datos in datos_cargados.items():
+    print(f"\nNombre: {nombre}")
+    print(f"Edad: {datos['edad']}")
+    print("Materias:")
+    for materia in datos["materias"]:
+        print(f" - {materia}")

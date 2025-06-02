@@ -1,0 +1,23 @@
+#Diseño visual css
+body {
+    background-color: #f0f8ff;
+    text-align: center;
+    font-family: sans-serif;
+}
+#Cambia el color de fondo y centra el contenido.
+
+input, button {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    font-size: 1rem;
+}
+#Le da tamaño y estilo a los campos de entrada y al botón.
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.3rem 0;
+}

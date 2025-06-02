@@ -1,0 +1,24 @@
+# app.py - Operaciones CRUD básicas con SQLAlchemy
+"""
+app.py - Operaciones CRUD básicas con SQLAlchemy y Flask
+Este script implementa una aplicación básica de Flask que utiliza SQLAlchemy para realizar operaciones CRUD (Crear, Leer, Actualizar, Eliminar) sobre una base de datos SQLite que almacena productos.
+Clases:
+    Producto: Modelo de producto con campos 'id', 'nombre' y 'precio'.
+Flujo principal:
+    - Configura la aplicación Flask y la base de datos SQLite.
+    - Crea la tabla 'Producto' si no existe.
+    - Inserta tres productos de ejemplo.
+    - Lee y muestra todos los productos almacenados.
+    - Actualiza el precio del producto "Teclado".
+    - Elimina el producto "Monitor".
+    - Muestra la lista final de productos.
+Uso:
+    Ejecutar el script para realizar las operaciones CRUD y ver los resultados impresos en consola.
+"""
+
+"""_summary_
+
+Returns:
+    _type_: _description_
+"""
+

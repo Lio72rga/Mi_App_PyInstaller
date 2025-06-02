@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Documents/Tabla"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Tabla",
+		"files.exclude": {
+			"**/.DS_Store": false,
+			"**/Thumbs.db": false
+		},
+		"cSpell.words": [
+			"Abrir"
+		]
+	}
+}
